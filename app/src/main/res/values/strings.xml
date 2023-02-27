@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">MapsAppNew</string>
+    <string name="GOOGLE_MAPS_API_KEY">AIzaSyBxLGtdGOuY0Tb14XiWqzDOdcfYzRe38UI</string>
+
+
+    //Costa The Moor Details
+    <string name="costaMoorTitle">Costa Coffee, The Moor</string>
+    <string name="costaMoorAddress">65–67 The Moor, Sheffield City Centre, Sheffield S1 4PF</string>
+    <string name="costaMoorOpenTimes_mon_frid">6:30am - 6:00pm\n\nMonday - Friday\n\n8:00am - 6:00pm\n\nSaturday \n\n9:00am - 5:00pm\n\nSunday</string>
+    <string name="costaMoor_phone_number">0755406734</string>
+    <string name="costaMoor_WiFi_Speed">60mbps</string>
+
+
+    //Starbucks Fargate Details
+    <string name="starbucksFargateTitle">Starbucks, Fargate</string>
+    <string name="starbucksFargateAddress">Fargate, Sheffield City Centre, Sheffield S1 2ED</string>
+    <string name="starbucksFargateOpenTimes_mon_frid">7:00am - 7:00pm\n\nMonday - Friday\n\n7:30am - 7:00pm\n\nSaturday \n\n8:00am - 6:00pm\n\nSunday</string>
+    <string name="starbucksFargate_phone_number">01142750358</string>
+    <string name="starbucksFargate_WiFi_Speed">34mbps</string>
+
+
+
+
+
+</resources>
+
