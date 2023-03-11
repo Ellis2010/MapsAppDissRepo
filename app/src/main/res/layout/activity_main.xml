@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/blue1"
     tools:context=".MainActivity">
 
     <Button
@@ -12,6 +13,11 @@
         android:layout_height="wrap_content"
         android:background="#EFE8E8"
         android:text="Map"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="290dp"
+        tools:layout_editor_absoluteY="584dp" />
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
