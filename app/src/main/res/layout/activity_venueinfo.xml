@@ -25,7 +25,7 @@
         android:id="@+id/OpenTimesText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/starbucksFargateOpenTimes_mon_frid"
+        android:text="OpenTimes"
         android:textAlignment="center"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
@@ -49,7 +49,7 @@
         android:id="@+id/AddressText"
         android:layout_width="121dp"
         android:layout_height="73dp"
-        android:text="@string/starbucksFargateAddress"
+        android:text="Address"
         android:textAlignment="center"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
@@ -61,7 +61,8 @@
         android:id="@+id/WifiSpeedText"
         android:layout_width="121dp"
         android:layout_height="21dp"
-        android:text="@string/starbucksFargateWifiSpeed"
+        android:text="WiFi_Speed"
+        android:autoLink="web"
         android:textAlignment="center"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -82,6 +83,16 @@
         app:srcCompat="@drawable/ic_wifispeed_icon" />
 
     <ImageView
+        android:id="@+id/costaMoreWebsiteIcon"
+        android:layout_width="39dp"
+        android:layout_height="38dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/AddressIcon"
+        app:layout_constraintEnd_toStartOf="@+id/titleText"
+        app:srcCompat="@drawable/ic_website_icon" />
+
+    <ImageView
         android:id="@+id/PhoneNumberIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -96,7 +107,7 @@
         android:id="@+id/titleText"
         android:layout_width="256dp"
         android:layout_height="41dp"
-        android:text="@string/starbucksFargateTitle"
+        android:text="Title"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="24sp"
@@ -111,7 +122,7 @@
         android:id="@+id/editTextNumber"
         android:layout_width="121dp"
         android:layout_height="20dp"
-        android:text="@string/starbucksFargate_phone_number"
+        android:text="phone_number"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="14sp"
@@ -142,8 +153,9 @@
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/BackgroundImage"
-        app:layout_constraintVertical_bias="0.92" />
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

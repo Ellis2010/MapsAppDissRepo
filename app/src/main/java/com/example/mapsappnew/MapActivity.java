@@ -119,24 +119,28 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         }
 
         googleMap.setOnInfoWindowClickListener(markers -> {
-            // Create an Intent to start the InfoActivity
-            Intent cMoor = new Intent(MapActivity.this, CostaMoor.class);
-            Intent sFargate = new Intent(MapActivity.this, StarbucksFargate.class);
 
+            // Create an Intent to start the InfoActivity
+            Intent venueInfo = new Intent(MapActivity.this, VenueInfo.class);
+
+            // Check to see which Marker was clicked
             if (Objects.equals(markers.getTag(), "cMoor")) {
                 // Start the InfoActivity
-                startActivity(cMoor);
+
+                // Pass the venueInt to the InfoActivity
+                venueInfo.putExtra("venueInt", 0);
+
+                startActivity(venueInfo);
             }
 
             if (Objects.equals(markers.getTag(), "sFargate")) {
                 // Start the InfoActivity
-                startActivity(sFargate);
-            }
-
+                venueInfo.putExtra("venueInt", 1);
+                startActivity(venueInfo);
+        }
         });
 
     }
-
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

@@ -3,10 +3,12 @@ package com.example.mapsappnew;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -17,19 +19,70 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class CostaMoor extends AppCompatActivity {
+public class VenueInfo extends AppCompatActivity {
 
-
+    public int venueInt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_costamoor);
+        setContentView(R.layout.activity_venueinfo);
     }
 
     @Override
     protected void onStart() {
         super.onStart();
+
+        // Initialize string arrays
+        String[] Names;
+        String[] Addresses;
+        String[] OpenTimes;
+        String[] PhoneNumbers;
+        String[] WifiSpeeds;
+        String[] Websites;
+
+        // Initialize resources class
+        Resources res = getResources();
+
+        // Assign string arrays to the string arrays in the string.xml file
+        Names = res.getStringArray(R.array.VenueNames);
+        Addresses = res.getStringArray(R.array.VenueAddresses);
+        OpenTimes = res.getStringArray(R.array.VenueOpenTimes);
+        PhoneNumbers = res.getStringArray(R.array.VenuePhoneNumbers);
+        WifiSpeeds = res.getStringArray(R.array.VenueWifiSpeeds);
+        Websites = res.getStringArray(R.array.VenueWebsites);
+
+        // Initialize text views from layout file
+        TextView Name = (TextView)findViewById(R.id.titleText);
+        TextView Address = (TextView)findViewById(R.id.AddressText);
+        TextView OpenTime = (TextView)findViewById(R.id.OpenTimesText);
+        TextView PhoneNumber = (TextView)findViewById(R.id.editTextNumber);
+        TextView WifiSpeed = (TextView)findViewById(R.id.WifiSpeedText);
+
+        // Get the intent from the map activity
+        Intent i = getIntent();
+
+        // Get the venueInt from the map activity
+        venueInt = i.getIntExtra("venueInt", 0);
+
+        // Text view values for Costa The Moor
+        if (venueInt == 0) {
+            Name.setText(Names[0]);
+            Address.setText(Addresses[0]);
+            OpenTime.setText(OpenTimes[0]);
+            PhoneNumber.setText(PhoneNumbers[0]);
+            WifiSpeed.setText(WifiSpeeds[0]);
+
+        }
+        // Text view values for Starbucks Fargate
+        if (venueInt == 1) {
+            Name.setText(Names[1]);
+            Address.setText(Addresses[1]);
+            OpenTime.setText(OpenTimes[1]);
+            PhoneNumber.setText(PhoneNumbers[1]);
+            WifiSpeed.setText(WifiSpeeds[1]);
+        }
+
 
         // Take user to website after clicking on the website icon
         ImageView img = (ImageView)findViewById(R.id.costaMoreWebsiteIcon);
@@ -38,11 +91,12 @@ public class CostaMoor extends AppCompatActivity {
                                        Intent intent = new Intent();
                                        intent.setAction(Intent.ACTION_VIEW);
                                        intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                                       intent.setData(Uri.parse("https://www.costa.co.uk/locations/store-locator/map?latitude=53.37653&longitude=-1.4729700000000037&open=1"));
+                                       intent.setData(Uri.parse(Websites[venueInt]));
                                        startActivity(intent);
                                    }
                                });
 
+        super.onStart();
         // Display map fragment at the bottom of the page
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map_fragment);
         mapFragment.getMapAsync(new OnMapReadyCallback() {

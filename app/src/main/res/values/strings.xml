@@ -3,20 +3,49 @@
     <string name="GOOGLE_MAPS_API_KEY">AIzaSyBxLGtdGOuY0Tb14XiWqzDOdcfYzRe38UI</string>
 
 
-    //Costa The Moor Details
-    <string name="costaMoorTitle">Costa Coffee, The Moor</string>
-    <string name="costaMoorAddress">65–67 The Moor, Sheffield City Centre, Sheffield S1 4PF</string>
-    <string name="costaMoorOpenTimes_mon_frid">6:30am - 6:00pm\n\nMonday - Friday\n\n8:00am - 6:00pm\n\nSaturday \n\n9:00am - 5:00pm\n\nSunday</string>
-    <string name="costaMoor_phone_number">0755406734</string>
-    <string name="costaMoor_WiFi_Speed">60mbps</string>
+    //////////////////////////////////////////////
+    ///////////STRING ARRAYS FOR VENUES///////////
+    //0 = Costa Coffee, The Moor
+    //1 = Starbucks, Fargate
+    //2 =
+    //3 =
+    //4 =
+    //5 =
+    //6 =
+    //7 =
+    //8 =
+    //9 =
+    //10 =
 
+    <string-array name="VenueNames">
+        <item>Costa Coffee, The Moor</item>
+        <item>Starbucks, Fargate</item>
+    </string-array>
 
-    //Starbucks Fargate Details
-    <string name="starbucksFargateTitle">Starbucks, Fargate</string>
-    <string name="starbucksFargateAddress">Fargate, Sheffield City Centre, Sheffield S1 2ED</string>
-    <string name="starbucksFargateOpenTimes_mon_frid">7:00am - 7:00pm\n\nMonday - Friday\n\n7:30am - 7:00pm\n\nSaturday \n\n8:00am - 6:00pm\n\nSunday</string>
-    <string name="starbucksFargate_phone_number">01142750358</string>
-    <string name="starbucksFargate_WiFi_Speed">34mbps</string>
+    <string-array name="VenueAddresses">
+        <item>65–67 The Moor, Sheffield City Centre, Sheffield S1 4PF</item>
+        <item>Fargate, Sheffield City Centre, Sheffield S1 2ED</item>
+    </string-array>
+
+    <string-array name="VenueOpenTimes">
+        <item>6:30am - 6:00pm\n\nMonday - Friday\n\n8:00am - 6:00pm\n\nSaturday \n\n9:00am - 5:00pm\n\nSunday</item>
+        <item>7:00am - 7:00pm\n\nMonday - Friday\n\n7:30am - 7:00pm\n\nSaturday \n\n8:00am - 6:00pm\n\nSunday</item>
+    </string-array>
+
+    <string-array name="VenuePhoneNumbers">
+        <item>0755406734</item>
+        <item>01142750358</item>
+    </string-array>
+
+    <string-array name="VenueWifiSpeeds">
+        <item>60mbps</item>
+        <item>34mbps</item>
+    </string-array>
+
+    <string-array name="VenueWebsites">
+        <item>https://www.costa.co.uk/locations/store-locator/map?latitude=53.3765&amp;longitude=-1.4729700000000037&amp;open=1</item>
+        <item>34mbps</item>
+    </string-array>
 
 
 
