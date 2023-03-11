@@ -9,22 +9,21 @@ import java.util.List;
 
 public class PagerAdapter extends FragmentStateAdapter {
 
-    List<Fragment> fragmentList;
+    private final List<Fragment> fragmentList;
 
-    public PagerAdapter(@NonNull FragmentActivity fragmentActivity, List<Fragment> fragmentList) {
-        super(fragmentActivity);
+    public PagerAdapter(FragmentActivity activity, List<Fragment> fragmentList) {
+        super(activity);
         this.fragmentList = fragmentList;
-
     }
 
     @NonNull
     @Override
     public Fragment createFragment(int position) {
-        return null;
+        return fragmentList.get(position);
     }
 
     @Override
     public int getItemCount() {
-       return fragmentList.size();
+        return fragmentList.size();
     }
 }

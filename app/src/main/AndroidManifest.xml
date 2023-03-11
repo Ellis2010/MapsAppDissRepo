@@ -46,6 +46,10 @@
                 android:value="" />
         </activity>
         <activity android:name=".MapActivity" />
+
+
+
+
     </application>
 
 </manifest>

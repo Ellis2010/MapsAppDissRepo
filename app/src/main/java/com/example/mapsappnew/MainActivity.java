@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -17,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
 
+
+    private boolean isFirstLaunch;
     private static final int ERROR_DIALOG_REQUEST = 9001;
 
 
@@ -25,25 +28,42 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        SharedPreferences prefs = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+        isFirstLaunch = prefs.getBoolean("isFirstLaunch", true);
+        if (isFirstLaunch) {
+            prefs.edit().putBoolean("isFirstLaunch", false).apply();
+        }
 
-
-
+        if (isFirstLaunch) {
+            if (savedInstanceState == null) {
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .add(R.id.container, new PagerFragment())
+                        .commit();
+            }
+        } else
+        {
+            Intent intent = new Intent(MainActivity.this, MapActivity.class);
+            startActivity(intent);
+        }
 
         //if Google Play Services are authenticated proceed to initialization
-        if(isServicesOk()) {
-            initialize();
-        }
+       // if(isServicesOk()) {
+         //   initialize();
+        //}
     }
 
+
+
     private void initialize() {
-        Button btnMap = findViewById(R.id.btnMap);
-        btnMap.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, MapActivity.class);
-                startActivity(intent);
-            }
-        });
+       // Button btnMap = findViewById(R.id.btnMap);
+       // btnMap.setOnClickListener(new View.OnClickListener() {
+         //   @Override
+           // public void onClick(View view) {
+              //  Intent intent = new Intent(MainActivity.this, MapActivity.class);
+              //  startActivity(intent);
+        //    }
+       // });
 
 
 

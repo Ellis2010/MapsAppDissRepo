@@ -11,11 +11,14 @@
     android:layout_height="match_parent">
     
     <TextView
+        android:id="@+id/textView"
         android:gravity="center"
         android:layout_gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:textColor="@color/black"
         android:textSize="24sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:text="@{text}"
         tools:text="Fragment"
 
