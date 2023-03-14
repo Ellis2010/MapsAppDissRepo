@@ -3,6 +3,7 @@ package com.example.mapsappnew;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
@@ -33,6 +34,9 @@ public class VenueInfo extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
+
+
+
         // Initialize string arrays
         String[] Names;
         String[] Addresses;
@@ -53,11 +57,11 @@ public class VenueInfo extends AppCompatActivity {
         Websites = res.getStringArray(R.array.VenueWebsites);
 
         // Initialize text views from layout file
-        TextView Name = (TextView)findViewById(R.id.titleText);
-        TextView Address = (TextView)findViewById(R.id.AddressText);
-        TextView OpenTime = (TextView)findViewById(R.id.OpenTimesText);
-        TextView PhoneNumber = (TextView)findViewById(R.id.editTextNumber);
-        TextView WifiSpeed = (TextView)findViewById(R.id.WifiSpeedText);
+        TextView Name = (TextView) findViewById(R.id.titleText);
+        TextView Address = (TextView) findViewById(R.id.AddressText);
+        TextView OpenTime = (TextView) findViewById(R.id.OpenTimesText);
+        TextView PhoneNumber = (TextView) findViewById(R.id.editTextNumber);
+        TextView WifiSpeed = (TextView) findViewById(R.id.WifiSpeedText);
 
         // Get the intent from the map activity
         Intent i = getIntent();
@@ -85,16 +89,16 @@ public class VenueInfo extends AppCompatActivity {
 
 
         // Take user to website after clicking on the website icon
-        ImageView img = (ImageView)findViewById(R.id.costaMoreWebsiteIcon);
+        ImageView img = (ImageView) findViewById(R.id.costaMoreWebsiteIcon);
         img.setOnClickListener(new View.OnClickListener() {
-                                   public void onClick(View v) {
-                                       Intent intent = new Intent();
-                                       intent.setAction(Intent.ACTION_VIEW);
-                                       intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                                       intent.setData(Uri.parse(Websites[venueInt]));
-                                       startActivity(intent);
-                                   }
-                               });
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_VIEW);
+                intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                intent.setData(Uri.parse(Websites[venueInt]));
+                startActivity(intent);
+            }
+        });
 
         super.onStart();
         // Display map fragment at the bottom of the page
@@ -103,7 +107,7 @@ public class VenueInfo extends AppCompatActivity {
             @Override
             public void onMapReady(GoogleMap googleMap) {
 
-                LatLng loc = new LatLng (53.376726165542095, -1.4729627899877071);
+                LatLng loc = new LatLng(53.376726165542095, -1.4729627899877071);
                 Marker marker = googleMap.addMarker(new MarkerOptions().position(loc));
 
                 assert marker != null;
@@ -120,7 +124,6 @@ public class VenueInfo extends AppCompatActivity {
     }
 
 
-
     @Override
     protected void onPause() {
         super.onPause();
@@ -128,7 +131,6 @@ public class VenueInfo extends AppCompatActivity {
         // Animate the activity sliding out to the left when the back action is triggered
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
-
 
 
 

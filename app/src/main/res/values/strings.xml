@@ -28,8 +28,8 @@
     </string-array>
 
     <string-array name="VenueOpenTimes">
-        <item>6:30am - 6:00pm\n\nMonday - Friday\n\n8:00am - 6:00pm\n\nSaturday \n\n9:00am - 5:00pm\n\nSunday</item>
-        <item>7:00am - 7:00pm\n\nMonday - Friday\n\n7:30am - 7:00pm\n\nSaturday \n\n8:00am - 6:00pm\n\nSunday</item>
+        <item>6:30am - 6:00pm &#160; &#160; &#160; Monday - Friday\n\n8:00am - 6:00pm &#160; &#160; &#160; Saturday \n\n9:00am - 5:00pm &#160; &#160; &#160; Sunday</item>
+        <item>7:00am - 7:00pm &#160; &#160; &#160; Monday - Friday\n\n7:30am - 7:00pm &#160; &#160; &#160; Saturday \n\n8:00am - 6:00pm &#160; &#160; &#160; Sunday</item>
     </string-array>
 
     <string-array name="VenuePhoneNumbers">
@@ -47,6 +47,19 @@
         <item>34mbps</item>
     </string-array>
 
+    <string-array name="StartPagesText">
+        <item>Whilst using public WiFi advertised in this app, please keep security in mind.</item>
+        <item>Although public WiFi is convenient there are risks. Such as Man-in-the-middle (MITM) attacks, Malware distribution, WiFi snooping and sniffing.</item>
+        <item>Luckily, there are ways to protect yourself from these risks. Such as:
+         \n&#8226; Use a VPN.
+        \n&#8226; Avoid accessing sensitive information.
+        \n&#8226; Stick to websites that use "HTTPS" in the URL.
+        \n&#8226; Use two-factor authentication.
+        \n&#8226; Keep your operating system and software up to date.
+        \n&#8226; Use antivirus software such as Norton or Malwarebytes
+        </item>
+        <item>Item4</item>
+    </string-array>
 
 
 

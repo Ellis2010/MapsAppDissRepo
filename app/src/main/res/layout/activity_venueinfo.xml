@@ -4,158 +4,161 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FBFBFB"
-    android:backgroundTint="#FFFDFD">
+    android:accessibilityLiveRegion="none"
+    android:background="@color/blue1">
 
-    <ImageView
-        android:id="@+id/BackgroundImage"
-        android:layout_width="0dp"
-        android:layout_height="169dp"
-        android:layout_weight=".9"
-        android:scaleType="centerCrop"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="335dp"
+        android:layout_height="685dp"
+        android:background="@drawable/main_border"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/background2" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/OpenTimesText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="OpenTimes"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.947"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/AddressText" />
+        <ImageView
+            android:id="@+id/PhoneNumberIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginBottom="64dp"
 
-    <ImageView
-        android:id="@+id/AddressIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.023"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.359"
-        app:srcCompat="@drawable/ic_house_icon" />
+            app:layout_constraintBottom_toTopOf="@id/WifiSpeedIcon"
+            app:layout_constraintStart_toStartOf="@+id/AddressIcon"
+            app:srcCompat="@drawable/ic_phonenumber_icon" />
 
-    <TextView
-        android:id="@+id/AddressText"
-        android:layout_width="121dp"
-        android:layout_height="73dp"
-        android:text="Address"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.14"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/AddressIcon" />
+        <ImageView
+            android:id="@+id/WifiSpeedIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
 
-    <TextView
-        android:id="@+id/WifiSpeedText"
-        android:layout_width="121dp"
-        android:layout_height="21dp"
-        android:text="WiFi_Speed"
-        android:autoLink="web"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.141"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.594" />
+            app:layout_constraintBottom_toTopOf="@+id/OpenTimesIcon"
+            app:layout_constraintStart_toStartOf="@+id/PhoneNumberIcon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.902"
+            app:srcCompat="@drawable/ic_wifispeed_icon" />
 
-    <ImageView
-        android:id="@+id/WifiSpeedIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/PhoneNumberIcon"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.592"
-        app:srcCompat="@drawable/ic_wifispeed_icon" />
+        <ImageView
+            android:id="@+id/AddressIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginBottom="60dp"
+            app:layout_constraintBottom_toTopOf="@id/PhoneNumberIcon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.045"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ic_house_icon" />
 
-    <ImageView
-        android:id="@+id/costaMoreWebsiteIcon"
-        android:layout_width="39dp"
-        android:layout_height="38dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/AddressIcon"
-        app:layout_constraintEnd_toStartOf="@+id/titleText"
-        app:srcCompat="@drawable/ic_website_icon" />
+        <TextView
+            android:id="@+id/AddressText"
+            android:layout_width="121dp"
+            android:layout_height="73dp"
+            android:text="Address"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@id/editTextNumber"
 
-    <ImageView
-        android:id="@+id/PhoneNumberIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/AddressIcon"
+            app:layout_constraintStart_toStartOf="@+id/editTextNumber"
+            app:layout_constraintTop_toBottomOf="@id/titleText" />
 
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/AddressIcon"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499"
-        app:srcCompat="@drawable/ic_phonenumber_icon" />
+        <TextView
+            android:id="@+id/editTextNumber"
+            android:layout_width="121dp"
+            android:layout_height="20dp"
 
-    <TextView
-        android:id="@+id/titleText"
-        android:layout_width="256dp"
-        android:layout_height="41dp"
-        android:text="Title"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/BackgroundImage"
-        app:layout_constraintVertical_bias="0.273" />
 
-    <TextView
-        android:id="@+id/editTextNumber"
-        android:layout_width="121dp"
-        android:layout_height="20dp"
-        android:text="phone_number"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.141"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            android:layout_marginBottom="56dp"
+            android:text="phone_number"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/WifiSpeedText"
+            app:layout_constraintStart_toEndOf="@+id/PhoneNumberIcon"
+            app:layout_constraintStart_toStartOf="@+id/WifiSpeedText"
+            app:layout_constraintTop_toBottomOf="@id/AddressText"
+            app:layout_constraintVertical_bias="1.0" />
 
-    <ImageView
-        android:id="@+id/OpenTimesIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        <TextView
+            android:id="@+id/WifiSpeedText"
+            android:layout_width="121dp"
+            android:layout_height="21dp"
 
-        android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="@+id/AddressIcon"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.627"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/AddressIcon"
-        app:srcCompat="@drawable/ic_opentimes_icon" />
 
-    <fragment
-        android:id="@+id/map_fragment"
-        android:name="com.google.android.gms.maps.SupportMapFragment"
-        android:layout_width="0dp"
-        android:layout_height="171dp"
+            android:autoLink="web"
+            android:text="WiFi_Speed"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/OpenTimesText"
+            app:layout_constraintStart_toEndOf="@+id/WifiSpeedIcon"
+            app:layout_constraintStart_toStartOf="@+id/OpenTimesText"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.904" />
 
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/BackgroundImage"
-        app:layout_constraintVertical_bias="1.0" />
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="256dp"
+            android:layout_height="41dp"
+            android:text="Title"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/AddressText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.028" />
+
+        <TextView
+            android:id="@+id/OpenTimesText"
+            android:layout_width="240dp"
+            android:layout_height="131dp"
+            android:text="OpenTimes"
+            android:textAlignment="viewStart"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/map_fragment"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.948" />
+
+        <ImageView
+            android:id="@+id/OpenTimesIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/WifiSpeedIcon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.476"
+            app:srcCompat="@drawable/ic_opentimes_icon" />
+
+        <ImageView
+            android:id="@+id/costaMoreWebsiteIcon"
+            android:layout_width="39dp"
+            android:layout_height="38dp"
+            app:layout_constraintBottom_toTopOf="@+id/OpenTimesText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.837"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleText"
+            app:layout_constraintVertical_bias="0.132"
+            app:srcCompat="@drawable/ic_website_icon" />
+
+        <fragment
+            android:id="@+id/map_fragment"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="298dp"
+            android:layout_height="162dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.567"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.885" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

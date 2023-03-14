@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <objectAnimator
+        android:duration="2000"
+        android:propertyName="backgroundColor"
+        android:valueFrom="#808080"
+        android:valueTo="#FFFFFF"
+        android:valueType="intType" />
+
+</set>

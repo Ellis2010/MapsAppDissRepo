@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CustomTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicator">@drawable/tab_layout_indicator</item>
+        <item name="tabIndicatorGravity">top</item>
+        <item name="tabIndicatorHeight">10dp</item>
+        <item name= "tabBackground">@color/blue1</item>
+        <item name="tabIndicatorColor">@color/white</item>
+
+    </style>
+
+
+
+</resources>

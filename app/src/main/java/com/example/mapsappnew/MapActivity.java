@@ -15,6 +15,7 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -33,6 +34,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -53,11 +55,15 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     private Boolean mLocationPermissionGranted = false;
     private GoogleMap mMap;
 
+
+
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
         Toast.makeText(this, "Map is Ready", Toast.LENGTH_SHORT).show();
         Log.d(TAG, "onMapReady: map is ready");
         mMap = googleMap;
+
+        mMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(this, R.raw.night));
         mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
 
             @Override
@@ -107,6 +113,8 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         if (mLocationPermissionGranted) {
             getDeviceLocation();
 
+
+
             if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
                     != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this,
                     Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -115,6 +123,8 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
             }
             mMap.setMyLocationEnabled(true);
             mMap.getUiSettings().setMyLocationButtonEnabled(false);
+
+
             init();
         }
 
@@ -140,6 +150,15 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         }
         });
 
+        ImageView tab = findViewById(R.id.tabIcon);
+
+        tab.isClickable();
+
+        tab.setOnClickListener(view -> {
+            Intent intent = new Intent(MapActivity.this, VenueInfo.class);
+            startActivity(intent);
+        });
+
     }
 
     @Override
@@ -154,17 +173,10 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
 
     }
 
-
-
-
-
-
-
-
-
-
-
-
+    @Override
+    public void onBackPressed() {
+        // Do nothing (i.e. don't call super.onBackPressed())
+    }
 
 
     private void init() {
@@ -198,7 +210,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
                 location.addOnCompleteListener((OnCompleteListener<Location>) task -> {
                     if (task.isSuccessful()) {
                         Log.d(TAG, "onComplete: found device location");
-                        Location currentLocation = (Location) task.getResult();
+                       Location currentLocation = (Location) task.getResult();
 
                         moveCamera(new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude())
                         );

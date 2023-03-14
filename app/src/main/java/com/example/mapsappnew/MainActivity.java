@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
 
 
-    private boolean isFirstLaunch;
+    private boolean isFirstLaunch = true;
     private static final int ERROR_DIALOG_REQUEST = 9001;
 
 
@@ -29,10 +29,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         SharedPreferences prefs = getSharedPreferences("MyPrefs", MODE_PRIVATE);
-        isFirstLaunch = prefs.getBoolean("isFirstLaunch", true);
-        if (isFirstLaunch) {
+        boolean isFirstLaunch = prefs.getBoolean("isFirstLaunch", true);
+
+       /* if (isFirstLaunch) {
             prefs.edit().putBoolean("isFirstLaunch", false).apply();
-        }
+        }*/
 
         if (isFirstLaunch) {
             if (savedInstanceState == null) {
@@ -41,31 +42,18 @@ public class MainActivity extends AppCompatActivity {
                         .add(R.id.container, new PagerFragment())
                         .commit();
             }
-        } else
+        }else
         {
             Intent intent = new Intent(MainActivity.this, MapActivity.class);
             startActivity(intent);
         }
-
-        //if Google Play Services are authenticated proceed to initialization
-       // if(isServicesOk()) {
-         //   initialize();
-        //}
     }
 
 
 
+
+
     private void initialize() {
-       // Button btnMap = findViewById(R.id.btnMap);
-       // btnMap.setOnClickListener(new View.OnClickListener() {
-         //   @Override
-           // public void onClick(View view) {
-              //  Intent intent = new Intent(MainActivity.this, MapActivity.class);
-              //  startActivity(intent);
-        //    }
-       // });
-
-
 
     }
 
