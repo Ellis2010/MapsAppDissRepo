@@ -2,16 +2,19 @@
     <string name="app_name">MapsAppNew</string>
     <string name="GOOGLE_MAPS_API_KEY">AIzaSyBxLGtdGOuY0Tb14XiWqzDOdcfYzRe38UI</string>
 
+    <string name="drawer_open">Open Drawer</string>
+    <string name="drawer_close">Close Drawer</string>
+
 
     //////////////////////////////////////////////
     ///////////STRING ARRAYS FOR VENUES///////////
     //0 = Costa Coffee, The Moor
     //1 = Starbucks, Fargate
-    //2 =
-    //3 =
-    //4 =
-    //5 =
-    //6 =
+    //2 = McDonald's, Farm Road
+    //3 = McDonald's, High St
+    //4 = KFC, Queens Road
+    //5 = Jiangtea
+    //6 = Wetherspoons Benjamin Huntsman
     //7 =
     //8 =
     //9 =
@@ -20,31 +23,108 @@
     <string-array name="VenueNames">
         <item>Costa Coffee, The Moor</item>
         <item>Starbucks, Fargate</item>
+        <item>McDonald\'s, Farm Road</item>
+        <item>McDonald\'s, High St</item>
+        <item>KFC, Queens Road</item>
+        <item>Jiangtea</item>
+        <item>Wetherspoons, \nBenjamin Huntsman</item>
     </string-array>
 
     <string-array name="VenueAddresses">
-        <item>65–67 The Moor, Sheffield City Centre, Sheffield S1 4PF</item>
-        <item>Fargate, Sheffield City Centre, Sheffield S1 2ED</item>
+        <item>65–67 The Moor, City Centre, Sheffield S1 4PF</item>
+        <item>Fargate,City Centre, Sheffield S1 2ED</item>
+        <item>Granville St, Farm Rd, Sheffield S2 2TP</item>
+        <item>20/22 High St, City Centre, Sheffield S1 2GE</item>
+        <item>Queens Rd, Lowfield, Sheffield S2 4DL</item>
+        <item>5 Hollis Croft, City Centre, Sheffield S1 4NQ</item>
+        <item>12–18 Cambridge St, Sheffield S1 4HP</item>
+    </string-array>
+
+    <string-array name="VenueAddressesShort">
+        <item>The Moor, Sheffield</item>
+        <item>Fargate, Sheffield</item>
+        <item>Granville St, Sheffield</item>
+        <item>High St, Sheffield</item>
+        <item>Queens Rd, Sheffield</item>
+        <item>Hollis Croft, Sheffield</item>
+        <item>Cambridge St, Sheffield</item>
     </string-array>
 
     <string-array name="VenueOpenTimes">
-        <item>6:30am - 6:00pm &#160; &#160; &#160; Monday - Friday\n\n8:00am - 6:00pm &#160; &#160; &#160; Saturday \n\n9:00am - 5:00pm &#160; &#160; &#160; Sunday</item>
-        <item>7:00am - 7:00pm &#160; &#160; &#160; Monday - Friday\n\n7:30am - 7:00pm &#160; &#160; &#160; Saturday \n\n8:00am - 6:00pm &#160; &#160; &#160; Sunday</item>
+        <item>&#160; &#160;6:30am - 6:00pm &#160; &#160;Monday - Friday\n\n&#160; &#160;8:00am - 6:00pm &#160; &#160;Saturday \n\n&#160; &#160;9:00am - 5:00pm &#160; &#160;Sunday</item>
+        <item>&#160; &#160;7:00am - 7:00pm &#160; &#160;Monday - Friday\n\n&#160; &#160;7:30am - 7:00pm &#160; &#160;Saturday \n\n&#160; &#160;8:00am - 6:00pm &#160; &#160;Sunday</item>
+        <item>&#160; &#160;24 Hours &#160; &#160; &#160; Thursday - Monday\n\n&#160; &#160;Closed &#160; &#160; &#160; &#160; &#160; Tuesday, Wednesday</item>
+        <item>&#160; &#160;5:00am - 2:00am &#160; &#160; &#160;Monday - Friday\n\n&#160; &#160;5:00am - 3:00am &#160; &#160; &#160;Saturday, Sunday</item>
+        <item>&#160; &#160;11:00am - 10:00pm &#160; &#160; &#160; Everyday</item>
+        <item>&#160; &#160;11:30am - 8:30pm &#160; &#160; &#160; Everyday</item>
+        <item>&#160; &#160;8:00am - 12:00am &#160; &#160; &#160; Monday - Thursday\n\n&#160; &#160;8:00am - 1:00am &#160; &#160; &#160; &#160; Friday, Saturday \n\n&#160; &#160;8:00am - 12:00am &#160; &#160; &#160; Sunday</item>
+
     </string-array>
 
+
     <string-array name="VenuePhoneNumbers">
-        <item>0755406734</item>
-        <item>01142750358</item>
+        <item>&#160; &#160;0755406734</item>
+        <item>&#160; &#160;01142750358</item>
+        <item>&#160; &#160;01142768905</item>
+        <item>&#160; &#160;01142752605</item>
+        <item>&#160; &#160;01142751243</item>
+        <item>&#160; &#160;01142724091</item>
+        <item>&#160; &#160;01142639500</item>
     </string-array>
 
     <string-array name="VenueWifiSpeeds">
-        <item>60mbps</item>
-        <item>34mbps</item>
+        <item>&#160; &#160;60mbps</item>
+        <item>&#160; &#160;34mbps</item>
+        <item>&#160; &#160;29mbps</item>
+        <item>&#160; &#160;75mbps</item>
+        <item>&#160; &#160;10mbps</item>
+        <item>&#160; &#160;40mbps</item>
+        <item>&#160; &#160;24mbps</item>
+
     </string-array>
+
+    <string-array name="VenueStatus">
+        <item>Open</item>
+        <item>Open</item>
+        <item>Open</item>
+        <item>Open</item>
+        <item>Open</item>
+        <item>Open</item>
+        <item>Open</item>
+
+    </string-array>
+
+    <string-array name="VenueDistance">
+        <item>60</item>
+        <item>34</item>
+        <item>29</item>
+        <item>75</item>
+        <item>10</item>
+        <item>40</item>
+        <item>24</item>
+
+    </string-array>
+
+    <integer-array name="WifiSpeeds">
+        <item>60</item>
+        <item>34</item>
+        <item>29</item>
+        <item>75</item>
+        <item>10</item>
+        <item>40</item>
+        <item>24</item>
+
+    </integer-array>
 
     <string-array name="VenueWebsites">
         <item>https://www.costa.co.uk/locations/store-locator/map?latitude=53.3765&amp;longitude=-1.4729700000000037&amp;open=1</item>
-        <item>34mbps</item>
+        <item>https://www.starbucks.com/store–locator/store/1012641/sheffield–fargate–4–fargate–sheffield–eng–s-1-2-he-gb</item>
+        <item>https://www.mcdonalds.com/gb/en-gb/location/sheffield/sheffield---farm-road/granville-square/8260719.html</item>
+        <item>https://www.mcdonalds.com/gb/en-gb/location/sheffield/sheffield-2/2022-high-street/8260496.html</item>
+        <item>https://www.kfc.co.uk/kfc-near-me/sheffield-queens-road?utm_term=Queens-Road&amp;utm_medium=organic&amp;utm_source=uberall</item>
+        <item>https://jiangtea.co.uk/</item>
+        <item>https://www.jdwetherspoon.com/pubs/all-pubs/england/south-yorkshire/the-benjamin-huntsman-sheffield</item>
+
     </string-array>
 
     <string-array name="StartPagesText">

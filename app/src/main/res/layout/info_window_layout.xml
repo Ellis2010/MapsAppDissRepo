@@ -1,4 +1,5 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:background="@drawable/white_border"
@@ -19,11 +20,13 @@
         android:id="@+id/snippet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="14sp"
-        android:textColor="#000000"
-        android:textAlignment="center"
         android:gravity="center"
         android:padding="8dp"
-        android:text="Snippet" />
+        android:text="Snippet"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="14sp" />
 
-</LinearLayout>
+    </LinearLayout>
+
+
