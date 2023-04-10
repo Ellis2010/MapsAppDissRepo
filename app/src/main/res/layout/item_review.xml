@@ -23,7 +23,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tv_nama_pasien"
+                    android:id="@+id/venue_name_review"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -32,26 +32,30 @@
                     android:textStyle="bold"
                     tools:text="Nama Pasien" />
 
-                <me.zhanghai.android.materialratingbar.MaterialRatingBar
-                    android:id="@+id/total_star_rating"
-                    style="@style/Widget.MaterialRatingBar.RatingBar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="15dp"
-                    android:layout_gravity="center"
-                    android:layout_marginBottom="@dimen/margin_value_5dp"
-                    android:layout_marginTop="@dimen/margin_value_5dp"
-                    android:isIndicator="true"
-                    android:maxHeight="20dp"
-                    android:minHeight="20dp"
-                    android:numStars="5"
-                    android:stepSize="0.25"
-                    app:mrb_progressBackgroundTint="@color/colorPrimary"
-                    app:mrb_progressTint="@color/colorPrimary"
-                    app:mrb_secondaryProgressTint="@color/colorPrimary" />
+
+
+                    <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                        android:id="@+id/total_star_rating"
+                        style="@style/Widget.MaterialRatingBar.RatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_value_5dp"
+                        android:layout_marginBottom="@dimen/margin_value_5dp"
+                        android:isIndicator="false"
+                        android:maxHeight="20dp"
+                        android:minHeight="20dp"
+                        android:numStars="5"
+                        android:stepSize="0.25"
+                        app:mrb_progressBackgroundTint="@color/colorPrimary"
+                        app:mrb_progressTint="@color/colorPrimary"
+                        app:mrb_secondaryProgressTint="@color/colorPrimary" />
+
+
             </LinearLayout>
 
             <TextView
-                android:id="@+id/tv_tgl_rating"
+                android:id="@+id/venue_rating"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/margin_value_10dp"
