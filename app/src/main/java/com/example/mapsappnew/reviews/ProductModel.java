@@ -1,7 +1,11 @@
 package com.example.mapsappnew.reviews;
 
-public class reviewsClass
-{
+/**
+ * The `ProductModel` class represents a product that can be reviewed by users.
+ */
+public class ProductModel {
+
+    // Private member variables to store the product's properties
     private String idProduct;
     private int totalVoters;
     private double totalRating;
@@ -12,7 +16,19 @@ public class reviewsClass
     private int star5;
     private String productName;
 
-    public reviewsClass(int totalVoters, double totalRating, int star1, int star2, int star3, int star4, int star5, String productName) {
+    /**
+     * Constructs a `ProductModel` object with the specified properties.
+     *
+     * @param totalVoters the total number of users who have reviewed the product
+     * @param totalRating the average rating of the product based on user reviews
+     * @param star1 the number of one-star ratings the product has received
+     * @param star2 the number of two-star ratings the product has received
+     * @param star3 the number of three-star ratings the product has received
+     * @param star4 the number of four-star ratings the product has received
+     * @param star5 the number of five-star ratings the product has received
+     * @param productName the name of the product
+     */
+    public ProductModel(int totalVoters, double totalRating, int star1, int star2, int star3, int star4, int star5, String productName) {
         this.totalVoters = totalVoters;
         this.totalRating = totalRating;
         this.star1 = star1;
@@ -23,9 +39,10 @@ public class reviewsClass
         this.productName = productName;
     }
 
-    public reviewsClass()
-    {
-
+    /**
+     * Constructs a `ProductModel` object with default values for all properties.
+     */
+    public ProductModel() {
     }
 
 

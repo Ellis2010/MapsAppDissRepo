@@ -1,17 +1,15 @@
 package com.example.mapsappnew.reviews;
 
-import com.example.mapsappnew.R;
-
-
-
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
+import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.mapsappnew.R;
 
 import java.util.List;
 
@@ -21,10 +19,10 @@ import me.zhanghai.android.materialratingbar.MaterialRatingBar;
 
 public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ReviewViewHolder> {
 
-    private List<ReviewModel> listReview;
+    private final List<ReviewModel> listReviewModel;
 
-    public ReviewAdapter(List<ReviewModel> listReview) {
-        this.listReview = listReview;
+    public ReviewAdapter(List<ReviewModel> listReviewModel) {
+        this.listReviewModel = listReviewModel;
     }
 
     @NonNull
@@ -36,30 +34,35 @@ public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ReviewView
 
     @Override
     public void onBindViewHolder(@NonNull ReviewViewHolder holder, int position) {
-        ReviewModel model = listReview.get(position);
+        ReviewModel model = listReviewModel.get(position);
 
         holder.totalStarRating.setRating(Float.parseFloat(String.valueOf(model.getTotalStarGiven())));
         holder.tvDescReview.setText(model.getReview());
-        holder.tvTglRating.setText(String.valueOf(model.getTimeStamp()));
-        holder.tvNamaPasien.setText(model.getName());
+        holder.venueRating.setText(String.valueOf(model.getTimeStamp()));
+        holder.venueNameReview.setText(model.getName());
+
     }
 
     @Override
     public int getItemCount() {
-        return listReview.size();
+        return listReviewModel.size();
     }
 
+    public static class ReviewViewHolder extends RecyclerView.ViewHolder {
 
-    public class ReviewViewHolder extends RecyclerView.ViewHolder {
-
-        @BindView(R.id.tv_nama_pasien)
-        TextView tvNamaPasien;
+        @SuppressLint("NonConstantResourceId")
+        @BindView(R.id.venue_name_review)
+        TextView venueNameReview;
+        @SuppressLint("NonConstantResourceId")
         @BindView(R.id.total_star_rating)
         MaterialRatingBar totalStarRating;
-        @BindView(R.id.tv_tgl_rating)
-        TextView tvTglRating;
+        @SuppressLint("NonConstantResourceId")
+        @BindView(R.id.venue_rating)
+        TextView venueRating;
+        @SuppressLint("NonConstantResourceId")
         @BindView(R.id.tv_desc_review)
         TextView tvDescReview;
+
 
         public ReviewViewHolder(View itemView) {
             super(itemView);
